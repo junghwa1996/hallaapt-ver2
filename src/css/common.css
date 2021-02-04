@@ -118,7 +118,7 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .iframe-box > .btn-sound.on {background: url(../img/sound_on.png) no-repeat;background-size: 100% 100%;}
 /* 20210113 */
 .sub-txt{padding: 12.5000vw 0; text-align: center; font-size: 4.1667vw; line-height: 1.5; font-weight: normal;}
-.tag-txt{font-size: 4.1667vw; line-height: 2.5; font-weight: 500;}
+.tag-txt{font-size: 4.1667vw; line-height: 2.5; font-weight: 500;text-align: right;}
 .tag-txt span{font-weight: bold;}
 .two-img{display: flex; justify-content: space-between;}
 .two-img img{width: 45.8333vw; height: 33.3333vw;}
@@ -270,6 +270,9 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .section.kv .txt-box h1 {position:relative; display:block; margin-bottom:16.6667vw;font-size:11.1111vw; line-height:1.3; font-weight: bold;font-family: 'NanumMyeongjoBold';}
 .section.kv .txt-box p {display:block; font-size:4.7222vw; line-height:1.4;}
 .floating-btn {position: fixed;left: 0;bottom: 10vw;z-index: 1000; height: 16.6667vw;}
+.kv-floating-banner{width:79.1667vw;background-color: rgba(46, 145, 191, 0.8);padding:5.0000vw 0;z-index: 1;position: absolute;bottom:0;left: 0;margin-left: 10.4167vw;margin-bottom: 11.8056vw;border-radius: 1.3889vw;}
+.kv-floating-banner p{font-size: 4.4444vw;color:#fff;text-align: center;line-height: 1.3;}
+.kv-floating-banner p:first-child{font-weight: bold;}
 .floating-btn button{width: 49.7222vw; height: 13.8889vw; background-color: #2aa0d7; font-size: 5.0000vw; color: #fff; font-weight: bold; border-radius: 0 6.9444vw 6.9444vw 0; box-shadow: 0.6944vw 0.2778vw 2.7778vw 0 rgba(0, 0, 0, 0.3); line-height: 2;}
 .floating-btn button:after{display:inline-block;content:"";width: 8.3333vw; height: 8.3333vw;vertical-align: middle;background-image:url('../img/floating-btn.png');background-size: cover;margin-left:2vw;}
 .floating-btn button span{ display: inline-block;}
@@ -297,11 +300,12 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .section.chapter01 .content-main .iframe-box{margin-top: -15.7222vw;}
 .section.chapter01 .content-main .title-box{background-color: #e6f9f3;}
 .section.chapter01 .content-main .title-box .title-txt{color: #000;}
-.section.chapter01 .video-place{margin-bottom: 27.7778vw;}
+.section.chapter01 .video-place{margin-bottom: 6.9444vw;}
 .section.chapter01 .title-line .title-box .title-txt{color: #24956a;}
 .section.chapter01 .title-line .title-box .title-txt p::before{background-color: #24956a;}
 .section.chapter01 .title-line .title-box .title-txt p:nth-child(1)::before{width: 38.8889vw;}
 .section.chapter01 .title-line .title-box .title-txt p:nth-child(2)::before{width: 44.4444vw;}
+.section.chapter01 .title-line.long-line .title-box .title-txt p::before{width: 69.4444vw;}
 .section.chapter01 .road-map{background-color: #e6f9f3; padding-bottom: 16.6667vw; margin-bottom: 11.1111vw;}
 .section.chapter01 .tag-txt{color: #24956a;}
 
@@ -613,6 +617,8 @@ footer .footer-logo img {width:100%;}
     .section.kv .txt-box {top:310px; left:48px; padding:0;}
     .section.kv .txt-box h1 {margin-bottom:120px;font-size:80px;}
     .section.kv .txt-box p {font-size:34px;}
+    .kv-floating-banner{width:570px;padding:36px 0;;margin-left: 75px;margin-bottom: 85px;border-radius: 10px;}
+    .kv-floating-banner p{font-size: 32px;}
     
     .floating-btn{bottom: -50px;}
     .floating-btn button{width: 358px; height: 100px;font-size: 36px;border-radius: 0 50px 50px 0; box-shadow: 5px 2px 20px 0 rgba(0, 0, 0, 0.3);}
@@ -633,14 +639,15 @@ footer .footer-logo img {width:100%;}
     .section .title-line .title-box .title-txt p::before{height: 16px;bottom: 3px;}
 
     .section.chapter01 .content-main .iframe-box{margin-top: -70px;}
-    .section.chapter01 .video-place{margin-bottom: 200px;}
+    .section.chapter01 .video-place{margin-bottom: 50px;}
     .section.chapter01 .title-line .title-box .title-txt p:nth-child(1)::before{width: 280px;}
     .section.chapter01 .title-line .title-box .title-txt p:nth-child(2)::before{width: 320px;}
+    .section.chapter01 .title-line.long-line .title-box .title-txt p::before{width: 500px;}
     .section.chapter01 .road-map{ padding-bottom: 120px; margin-bottom: 80px;}
 
 
     .section .slider-gallery .photo-line span{ padding: 5px 20px; display: inline-block; font-size: 26px;}
-    .section.chapter01 .slider-gallery .photo-line{border-bottom: 1px solid #d9cc47;}
+    .section.chapter01 .slider-gallery .photo-line{border-bottom: 1px solid #24956a;}
     .section.chapter01 .slider-gallery .tag-txt{padding-bottom: 50px;}
     .section.chapter01 .road-map .title-box{padding-bottom: 0;}
     .section.chapter01 .road-map .type3 .slide-content{height: 550px;}

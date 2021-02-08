@@ -394,7 +394,15 @@ function customAlert(txt) {
       popTimer = setTimeout(function() {
       $(".term-check").hide()
     }, 3e3);
-    }
+}
+
+$(".sec-tab .tab-menu li").click(function(){
+    var idx = $(this).index();
+    $(".sec-tab .tab-menu li").removeClass("active");
+    $(".sec-tab .tab-menu li").eq(idx).addClass("active");
+    $(".sec-tab .tab-content li").hide();
+    $(".sec-tab .tab-content li").eq(idx).show();
+});
 
 
 

@@ -396,12 +396,28 @@ function customAlert(txt) {
     }, 3e3);
 }
 
-$(".sec-tab .tab-menu li").click(function(){
+$(".plan-wrap .sec01 .sec-tab .tab-menu li").click(function(){
     var idx = $(this).index();
-    $(".sec-tab .tab-menu li").removeClass("active");
-    $(".sec-tab .tab-menu li").eq(idx).addClass("active");
-    $(".sec-tab .tab-content li").hide();
-    $(".sec-tab .tab-content li").eq(idx).show();
+    $(".plan-wrap .sec01 .sec-tab .tab-menu li").removeClass("active");
+    $(".plan-wrap .sec01 .sec-tab .tab-menu li").eq(idx).addClass("active");
+    $(".plan-wrap .sec01 .sec-tab .tab-content li").hide();
+    $(".plan-wrap .sec01 .sec-tab .tab-content li").eq(idx).show();
+});
+
+$(".plan-wrap .sec02 .sec-tab .tab-menu li").click(function(){
+    var idx = $(this).index();
+    $(".plan-wrap .sec02 .sec-tab .tab-menu li").removeClass("active");
+    $(".plan-wrap .sec02 .sec-tab .tab-menu li").eq(idx).addClass("active");
+    $(".plan-wrap .sec02 .sec-tab .tab-content li").hide();
+    $(".plan-wrap .sec02 .sec-tab .tab-content li").eq(idx).show();
+});
+
+$(".plan-wrap .sec03 .sec-tab .tab-menu li").click(function(){
+    var idx = $(this).index();
+    $(".plan-wrap .sec03 .sec-tab .tab-menu li").removeClass("active");
+    $(".plan-wrap .sec03 .sec-tab .tab-menu li").eq(idx).addClass("active");
+    $(".plan-wrap .sec03 .sec-tab .tab-content li").hide();
+    $(".plan-wrap .sec03 .sec-tab .tab-content li").eq(idx).show();
 });
 
 

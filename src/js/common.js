@@ -48,6 +48,41 @@ $(document).ready((function() {
         dots: !0,
         arrows: !0
     }),
+    $('.slider04').slick({
+		fade: false,
+		speed: 800,
+		dots: true,
+		draggable: true,
+		touchMove: true,
+		pauseOnHover: true,
+        asNavFor: '.slider05',
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+					pauseOnHover: false
+				}
+			}
+		]
+	}),
+    $('.slider05').slick({
+		fade: true,
+		speed: 500,
+		dots: false,
+        arrows: false,
+		draggable: false,
+		touchMove: false,
+		pauseOnHover: false,
+        asNavFor: '.slider04',
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+					pauseOnHover: false
+				}
+			}
+		]
+    }),
     $(".sec06 .tooltip-list li").on("click", "a", (function(e) {
         e.preventDefault();
         var $this = $(this);
@@ -148,15 +183,35 @@ $(document).ready((function() {
     }
     )),
     $(".btn-popup").on("click", (function() {
-        $(window).innerWidth() >= 769 ? ($("body").append('<div class="overlay"></div>'),
-        $(".layer-popup").css("top", $(window).scrollTop() + 55),
-        $(this).hasClass("btn-expand") && (popScrollTop = $(window).scrollTop(),
-        $("body").addClass("scroll-lock"),
-        $("body").css("top", -1 * popScrollTop + "px"))) : ($(".layer-popup").css("top", $(window).scrollTop()),
-        $(this).hasClass("btn-expand") && (popScrollTop = $(window).scrollTop(),
-        $("body").append('<div class="overlay"></div>'),
-        $("body").addClass("scroll-lock"),
-        $("body").css("top", -1 * popScrollTop + "px")))
+        if(screen.width >= 769) {
+			$('body').append('<div class="overlay"></div>');
+            $('.layer-popup').css("top", $(window).scrollTop() + 55);
+            if($(this).hasClass('btn-plan') || $(this).hasClass('btn-gallery')) {
+                popScrollTop = $(window).scrollTop();
+                $('body').addClass('scroll-lock');
+                $('body').css('top', -1 * popScrollTop + 'px');
+            }
+		} else {
+            $('.layer-popup').css("top", $(window).scrollTop());
+            
+            if($(this).hasClass('btn-plan') || $(this).hasClass('btn-gallery')) {
+                popScrollTop = $(window).scrollTop();
+                $('body').append('<div class="overlay"></div>');
+                $('body').addClass('scroll-lock');
+                $('body').css('top', -1 * popScrollTop + 'px');
+            }
+        }
+
+        if($(this).hasClass('btn-plan')) {
+            $('.layer-popup').removeAttr('style');
+            $('.layer-popup.plan-expand').css('display', 'block');
+            $('.slider04').slick('setPosition');
+            $('.slider04').find('.img-box').scrollTop(0);
+        } else if($(this).hasClass('btn-gallery')) {
+            $('.layer-popup').removeAttr('style');
+            $('.layer-popup.gallery-expand').css('display', 'block');
+            $('.slider05').slick('setPosition');
+        }
     }
     )),
     $(".layer-popup").on("click", ".btn-popup-close", (function() {
@@ -396,28 +451,31 @@ function customAlert(txt) {
     }, 3e3);
 }
 
-$(".plan-wrap .sec01 .sec-tab .tab-menu li").click(function(){
+$(".plan-wrap .sec02 .sec-tab .tab-menu a").click(function(){
     var idx = $(this).index();
-    $(".plan-wrap .sec01 .sec-tab .tab-menu li").removeClass("active");
-    $(".plan-wrap .sec01 .sec-tab .tab-menu li").eq(idx).addClass("active");
-    $(".plan-wrap .sec01 .sec-tab .tab-content li").hide();
-    $(".plan-wrap .sec01 .sec-tab .tab-content li").eq(idx).show();
-});
-
-$(".plan-wrap .sec02 .sec-tab .tab-menu li").click(function(){
-    var idx = $(this).index();
-    $(".plan-wrap .sec02 .sec-tab .tab-menu li").removeClass("active");
-    $(".plan-wrap .sec02 .sec-tab .tab-menu li").eq(idx).addClass("active");
+    $(".plan-wrap .sec02 .sec-tab .tab-menu a").removeClass("on");
+    $(".plan-wrap .sec02 .sec-tab .tab-menu a").eq(idx).addClass("on");
     $(".plan-wrap .sec02 .sec-tab .tab-content li").hide();
     $(".plan-wrap .sec02 .sec-tab .tab-content li").eq(idx).show();
 });
 
-$(".plan-wrap .sec03 .sec-tab .tab-menu li").click(function(){
+$(".plan-wrap .sec03 .sec-tab .tab-menu a").click(function(){
     var idx = $(this).index();
-    $(".plan-wrap .sec03 .sec-tab .tab-menu li").removeClass("active");
-    $(".plan-wrap .sec03 .sec-tab .tab-menu li").eq(idx).addClass("active");
+    $(".plan-wrap .sec03 .sec-tab .tab-menu a").removeClass("on");
+    $(".plan-wrap .sec03 .sec-tab .tab-menu a").eq(idx).addClass("on");
     $(".plan-wrap .sec03 .sec-tab .tab-content li").hide();
     $(".plan-wrap .sec03 .sec-tab .tab-content li").eq(idx).show();
+});
+
+$('.slider05').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('.sec-tab .tab-menu a:eq(' + nextSlide + ')').addClass('on').siblings().removeClass('on');
+});
+
+$('.sec-tab .tab-menu').on('click', 'a', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var index = $this.index();
+    $('.slider05').slick('slickGoTo', index);
 });
 
 

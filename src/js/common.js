@@ -48,23 +48,18 @@ $(document).ready((function() {
         dots: !0,
         arrows: !0
     }),
+    // 평면도
     $('.slider04').slick({
 		fade: false,
 		speed: 800,
-		dots: true,
+        dots: true,
+        arrows: !0,
 		draggable: true,
 		touchMove: true,
 		pauseOnHover: true,
         asNavFor: '.slider05',
-		responsive: [
-			{
-				breakpoint: 769,
-				settings: {
-					pauseOnHover: false
-				}
-			}
-		]
-	}),
+    }),
+    // 평면도 팝업
     $('.slider05').slick({
 		fade: true,
 		speed: 500,
@@ -74,14 +69,24 @@ $(document).ready((function() {
 		touchMove: false,
 		pauseOnHover: false,
         asNavFor: '.slider04',
-		responsive: [
-			{
-				breakpoint: 769,
-				settings: {
-					pauseOnHover: false
-				}
-			}
-		]
+    }),
+    $('.slider06').slick({
+		fade: false,
+		speed: 800,
+		dots: true,
+		draggable: true,
+		touchMove: true,
+        pauseOnHover: true,
+        asNavFor: '.slider07',
+    }),
+    $('.slider07').slick({
+		fade: false,
+		speed: 800,
+		dots: true,
+		draggable: true,
+		touchMove: true,
+        pauseOnHover: true,
+        asNavFor: '.slider06',
     }),
     $(".sec06 .tooltip-list li").on("click", "a", (function(e) {
         e.preventDefault();
@@ -210,7 +215,7 @@ $(document).ready((function() {
         } else if($(this).hasClass('btn-gallery')) {
             $('.layer-popup').removeAttr('style');
             $('.layer-popup.gallery-expand').css('display', 'block');
-            $('.slider05').slick('setPosition');
+            $('.slider07').slick('setPosition');
         }
     }
     )),

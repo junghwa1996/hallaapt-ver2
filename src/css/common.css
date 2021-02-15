@@ -68,7 +68,7 @@ i,em,dfn,address {font-style:normal;}
 a {background-color:transparent; color:inherit; text-decoration:none; -webkit-box-sizing:border-box; box-sizing:border-box;}
 a:link,a:visited,a:hover,a:active,a:focus {text-decoration:none; outline:0;}
 ul,ol,dl {list-style:none;}
-img,video {max-width:100%; border:0 none; vertical-align:top;}
+img,video {width:100%; border:0 none; vertical-align:top;}
 legend,caption {overflow:hidden; position:absolute; width:1px; height:1px; padding:0; border:0; margin:-1px; clip:rect(0 0 0 0);}
 hr {display:none; height:0;}
 ::-moz-selection {background:#b3d4fc; text-shadow:none;}
@@ -205,7 +205,7 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .slider .slick-dots > li.slick-active {/*background-color:rgba(0, 180, 177, 0.2);*/ background-color:rgba(255, 255, 255, 0.2);}
 .slider .slick-dots > li.slick-active > button {background-color:#fff; transition:background-color 1s;}
 
-.slider .slick-arrow {z-index: 100;position: absolute;font-size: 0;width: 9.9667vw;height: 10.3056vw;background: url(../img/sprites_2nd.png) no-repeat -8vw -27.2vw;}
+.slider .slick-arrow {z-index: 100;position: absolute;font-size: 0;width: 12.9667vw;height: 13.3056vw;background: url(../img/sprites_2nd.png) no-repeat -11vw -36.2vw;}
 
 .slider01 .slick-arrow,
 .slider02 .slick-arrow{top:40%;}
@@ -327,7 +327,7 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .sec-tab .tab-menu a{border: 0.1389vw solid #2794c7;display: block;font-weight: bold;margin-bottom: 2.7778vw;height:11.1111vw;line-height: 2.2;color:#2794c7}
 .sec-tab .tab-menu a.on{background-color: #2794c7;color:#fff;}
 .sec-tab .tab-menu a.type1{width: 27.7778vw;font-size:5.0000vw;}
-.sec-tab .tab-menu a.type2{width: 43.0556vw;font-size:4.4444vw;}
+.sec-tab .tab-menu a.type2{width: 42.4556vw;font-size:4.4444vw;}
 
 .detail-gallery .slide-content{position: relative;}
 .detail-gallery .slide-content .btn-expand{right:4%;top:4%;z-index: 1;}
@@ -417,7 +417,7 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .unit-tour div>span{display: inline-block; font-size:3.6111vw;color:#fff;background-color: #2794c7;padding: 1.3889vw 2.7778vw;}
 .unit-tour .vr-video{margin-bottom: 8.6111vw; max-width:94.4444%;margin-left:auto;margin-right:auto;}
 .unit-tour .vr-video .img-box{position: relative;}
-.unit-tour .vr-video .img-box > a{position: absolute; left: 50%;top:50%;transform: translate(-50%,-50%);width: 27.7778vw;height:27.7778vw;background-color: transparent;}
+.unit-tour .vr-video .img-box > a{position: absolute; left: 50%;top:50%;transform: translate(-50%,-50%);width: 27.7778vw;height:27.7778vw;background-color: transparent;cursor: pointer;}
 .unit-tour .slider-gallery .slider{padding-top: 0;}
 
 .section.chapter01.ch-3 .content-main > .title-box{background-color: #feeaac;}
@@ -596,6 +596,17 @@ footer .footer-logo img {width:100%;}
 .layer-popup.gallery-expand .slider07 .slick-arrow.slick-prev {display:block !important; left:2.7778vw;}
 .layer-popup.gallery-expand .slider07 .slick-arrow.slick-next{right:2.7778vw;transform: rotate(180deg);}
 .layer-popup.gallery-expand .slider07 .slick-dots {top:auto; bottom:0; right: calc(50% - 20.1389vw);height:8.3333vw}
+
+/* --------------------
+	vr 팝업
+-------------------- */
+@media screen and (orientation:portrait) {
+    .vr-iframe-box.rotate {width:100vh; height:100vw; transform:translateX(100vw) rotate(90deg); transform-origin:top left;}
+}
+@media screen and (orientation:landscape) {
+    .vr-iframe-box.rotate {width:100%; height:100%;}
+    .vr-iframe-box.rotate .btn-popup-close {display:block !important;}
+}
 
 
 @media (min-width:769px) {
@@ -944,7 +955,7 @@ footer .footer-logo img {width:100%;}
     .layer-popup.plan-expand {padding:100px 0 0;}
     .layer-popup.plan-expand .btn-popup-close {top:20px !important; right:calc(50% - 340px)!important; width:46px; height:46px; background:url('../img/sprites_2nd.png') no-repeat -261px -10px;}
     .layer-popup.plan-expand .slider04 {width:720px;}
-    .layer-popup.plan-expand .slider04 .slide-content .img-box {height:100vh;padding: 0 24px;}
+    .layer-popup.plan-expand .slider04 .slide-content .img-box {height:100vh;}
 
         /* --------------------
         gallery-expand

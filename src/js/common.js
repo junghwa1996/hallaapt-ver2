@@ -131,6 +131,22 @@ $(document).ready((function() {
     )),
     $(".floating-banner").on("touchstart", (function() {}
     )),
+    // vr 모바일: 레이어팝업 / pc: 새창으로 열기
+    $('.btn-show-vr').on('click',function() {
+        var src = $(this).data('src');
+
+        if(screen.width < 769) {
+            $('.vr-iframe-box').show();
+            $('#vr-iframe').attr('src', src);
+        } else {
+            window.open(src, "_blank", "");
+        }
+    }),
+    // vr 팝업 닫기
+    $('.vr-iframe-box').on('click', '.btn-popup-close', function(){
+        $('.vr-iframe-box').hide();
+        $('.vr-iframe-box iframe').attr('src', '');
+    }),
     function() {
         function scrollContent() {
             var $window = $(window), bannerTimeout, isBanner, $viewport = $(".momo-wrap .container");

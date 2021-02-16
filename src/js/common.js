@@ -104,8 +104,9 @@ $(document).ready((function() {
     }),
     $('.slider06').slick({
 		fade: false,
-		speed: 800,
 		dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
 		draggable: true,
 		touchMove: true,
         pauseOnHover: true,
@@ -328,28 +329,31 @@ $(document).ready((function() {
         var $this, index = $(this).parent().index();
         0 == index ? $("html, body").stop().animate({
             scrollTop: $(".kv").offset().top
-        }, 700) : 1 == index ? $("html, body").stop().animate({
-            scrollTop: $(".chapter01").offset().top
         }, 700) : 2 == index ? $("html, body").stop().animate({
             scrollTop: $(".emeblem").offset().top
         }, 700) : 3 == index ? $("html, body").stop().animate({
             scrollTop: $(".location").offset().top
         }, 700) : 4 == index ? $("html, body").stop().animate({
-            scrollTop: $(".chapter02").offset().top
-        }, 700) : 5 == index ? $("html, body").stop().animate({
-            scrollTop: $(".interview").offset().top
+            scrollTop: $("#expert").offset().top
         }, 700) : 6 == index ? $("html, body").stop().animate({
-            scrollTop: $(".FAQ").offset().top
+            scrollTop: $(".chapter02").offset().top
         }, 700) : 7 == index ? $("html, body").stop().animate({
-            scrollTop: $(".chapter03").offset().top
+            scrollTop: $(".unit-tour").offset().top
         }, 700) : 8 == index ? $("html, body").stop().animate({
-            scrollTop: $(".vivaldi").offset().top
+            scrollTop: $(".plan-wrap").offset().top
         }, 700) : 9 == index ? $("html, body").stop().animate({
-            scrollTop: $(".modelHouse").offset().top
+            scrollTop: $(".plan-wrap .sec02").offset().top
         }, 700) : 10 == index ? $("html, body").stop().animate({
-            scrollTop: $(".event").offset().top
-            // 20210114
-        }, 700) : 11 == index && $("html, body").stop().animate({
+            scrollTop: $(".plan-wrap .slider-gallery").offset().top
+        }, 700) : 12 == index ? $("html, body").stop().animate({
+            scrollTop: $(".chapter03").offset().top
+        }, 700) : 13 == index ? $("html, body").stop().animate({
+            scrollTop: $(".price-list").offset().top
+        }, 700) : 14 == index ? $("html, body").stop().animate({
+            scrollTop: $(".schedule ").offset().top
+        }, 700) : 15 == index ? $("html, body").stop().animate({
+            scrollTop: $(".infor").offset().top
+        }, 700) : 16 == index && $("html, body").stop().animate({
             scrollTop: $(".section.event .giftcard-box").offset().top
         }, 700)
     }
@@ -483,5 +487,10 @@ $('.sec-tab .tab-menu').on('click', 'a', function(e) {
     var index = $this.index();
     $('.slider05').slick('slickGoTo', index);
 });
-
+$(function(){
+    var wow = new WOW(// default
+    {offset: 180}
+    );
+    wow.init();
+});
 

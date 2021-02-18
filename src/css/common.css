@@ -634,7 +634,7 @@ footer .footer-logo img {width:100%;}
     .vr-iframe-box.rotate {width:100vh; height:100vw; transform:translateX(100vw) rotate(90deg); transform-origin:top left;}
 }
 @media screen and (orientation:landscape) {
-    .vr-iframe-box.rotate {width:100%; height:100%;}
+    .vr-iframe-box.rotate {width:100vw; height:100vh;}
     .vr-iframe-box.rotate .btn-popup-close {display:block !important;}
 }
 

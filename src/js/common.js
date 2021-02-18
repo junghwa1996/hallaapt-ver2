@@ -330,29 +330,29 @@ $(document).ready((function() {
         0 == index ? $("html, body").stop().animate({
             scrollTop: $(".kv").offset().top
         }, 700) : 2 == index ? $("html, body").stop().animate({
-            scrollTop: $(".emeblem").offset().top
-        }, 700) : 3 == index ? $("html, body").stop().animate({
-            scrollTop: $(".location").offset().top
-        }, 700) : 4 == index ? $("html, body").stop().animate({
-            scrollTop: $("#expert").offset().top
-        }, 700) : 6 == index ? $("html, body").stop().animate({
             scrollTop: $(".chapter02").offset().top
-        }, 700) : 7 == index ? $("html, body").stop().animate({
+        }, 700) : 3 == index ? $("html, body").stop().animate({
             scrollTop: $(".unit-tour").offset().top
-        }, 700) : 8 == index ? $("html, body").stop().animate({
+        }, 700) : 4 == index ? $("html, body").stop().animate({
             scrollTop: $(".plan-wrap").offset().top
-        }, 700) : 9 == index ? $("html, body").stop().animate({
+        }, 700) : 5 == index ? $("html, body").stop().animate({
             scrollTop: $(".plan-wrap .sec02").offset().top
-        }, 700) : 10 == index ? $("html, body").stop().animate({
+        }, 700) : 6 == index ? $("html, body").stop().animate({
             scrollTop: $(".plan-wrap .slider-gallery").offset().top
-        }, 700) : 12 == index ? $("html, body").stop().animate({
+        }, 700) : 8 == index ? $("html, body").stop().animate({
             scrollTop: $(".chapter03").offset().top
-        }, 700) : 13 == index ? $("html, body").stop().animate({
+        }, 700) : 9 == index ? $("html, body").stop().animate({
             scrollTop: $(".price-list").offset().top
-        }, 700) : 14 == index ? $("html, body").stop().animate({
+        }, 700) : 10 == index ? $("html, body").stop().animate({
             scrollTop: $(".schedule ").offset().top
-        }, 700) : 15 == index ? $("html, body").stop().animate({
+        }, 700) : 11 == index ? $("html, body").stop().animate({
             scrollTop: $(".infor").offset().top
+        }, 700) : 13 == index ? $("html, body").stop().animate({
+            scrollTop: $(".emeblem").offset().top
+        }, 700) : 14 == index ? $("html, body").stop().animate({
+            scrollTop: $(".location").offset().top
+        }, 700) : 15 == index ? $("html, body").stop().animate({
+            scrollTop: $("#expert").offset().top
         }, 700) : 16 == index && $("html, body").stop().animate({
             scrollTop: $(".section.event .giftcard-box").offset().top
         }, 700)

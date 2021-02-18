@@ -333,7 +333,7 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .sec-tab .tab-menu a.type1{width: 27.7778vw;font-size:5.0000vw;}
 .sec-tab .tab-menu a.type2{width: 42.4556vw;font-size:4.4444vw;}
 
-.plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(1){border: 0.1389vw solid #2794c7; color: #2794c7;}
+/* .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(1){border: 0.1389vw solid #2794c7; color: #2794c7;}
 .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(1).on{background-color: #2794c7; }
 .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(2){border: 0.1389vw solid #00abcc; color: #00abcc;}
 .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(2).on{background-color: #00abcc;}
@@ -344,7 +344,7 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(5){border: 0.1389vw solid #f47a6f; color: #f47a6f;}
 .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(5).on{background-color: #f47a6f; }
 .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(6){border: 0.1389vw solid #62c2a5; color: #62c2a5;}
-.plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(6).on{background-color: #62c2a5;}
+.plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(6).on{background-color: #62c2a5;} */
 
 .plan-wrap .sec01 .sec-tab .tab-menu a.on{color: #fff;}
 
@@ -448,8 +448,9 @@ body.scroll-lock {position:fixed; height:100%; overflow:hidden;}
 .slider.type3.color1 .slick-dots > li.slick-active::before{background-color: #24956a;}
 .section.chapter01.ch-3 .video-place{margin-bottom: 0;}
 
-.occupant-notice{display: block;width: 88.8889vw;margin: 0 auto 6.9444vw;}
-.occupant-notice button {background-color: #f3c32a; color: #fff; font-size: 5.5556vw;width: 100%; height: 16.3889vw;margin: 0 auto;}
+.occupant-notice-wrap{display: flex;justify-content: space-between;}
+.occupant-notice{display: block;width: 48.6111vw;margin: 0 0 6.9444vw 0;}
+.occupant-notice button {background-color: #f3c32a; color: #fff; font-size: 4.4444vw;width: 100%; height: 16.3889vw;margin: 0 auto; line-height: 1.2;font-family:'NotoSansKR';}
 .price-list,
 .schedule{width: 94.4444vw; margin: 0 auto 13.8889vw;}
 .ch-3.title-box{padding:0;}
@@ -829,13 +830,13 @@ footer .footer-logo img {width:100%;}
     .sec-tab .tab-menu a.type1{width: 200px;font-size:36px;}
     .sec-tab .tab-menu a.type2{width: 310px;font-size:32px;}
 
-    .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(1){border: 1px solid #2794c7; color: #2794c7;}
+    /* .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(1){border: 1px solid #2794c7; color: #2794c7;}
     .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(2){border: 1px solid #00abcc; color: #00abcc;}
     .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(3){border: 1px solid #956caf; color: #956caf;}
     .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(4){border: 1px solid #f8aa9e; color: #f8aa9e;}
     .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(5){border: 1px solid #f47a6f; color: #f47a6f;}
     .plan-wrap .sec01 .sec-tab .tab-menu a:nth-child(6){border: 1px solid #62c2a5; color: #62c2a5;}
-    .plan-wrap .sec01 .sec-tab .tab-menu a.on{color: #fff;}
+    .plan-wrap .sec01 .sec-tab .tab-menu a.on{color: #fff;} */
 
     .sec02 .sec-tab .tab-content,
     .sec03 .sec-tab .tab-content{margin-bottom: 50px;}
@@ -856,8 +857,8 @@ footer .footer-logo img {width:100%;}
     .line-box{border-bottom: 1px solid #2794c7;margin-bottom: 40px;max-width: 94.4444%;margin: 0 auto 40px auto;}
     .line-box span{font-size: 26px;padding: 10px 20px;border-bottom: 1px solid #2794c7;}
 
-    .occupant-notice{width: 640px;margin: 0 auto 50px;}
-    .occupant-notice button {  font-size: 40px;width: 100%; height: 118px;margin: 0 auto;}
+    .occupant-notice{width: 350px;margin: 0 0 50px 0;}
+    .occupant-notice button {  font-size: 32px;width: 100%; height: 118px;margin: 0 auto;}
     .price-list,
     .schedule{width: 680px; margin: 0 auto 100px;}
     .price-list .price-img{margin-bottom: 43px;}
